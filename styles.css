@@ -31,10 +31,14 @@ body {
 	font-family: "Source Sans Pro", sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* HEADER */
 
 nav {
-	background: #ffffff;
+	background: var(--white-color);
 	box-shadow: 0px 5px 10px rgba(255, 174, 0, 0.26), 0px 20px 40px rgba(255, 174, 0, 0.29);
 }
 
@@ -138,7 +142,7 @@ nav .wrapper .right .btn-login {
 /* HERO */
 
 header section {
-	background: linear-gradient(180deg, var(--primary-color) 0%, #f1aa0fa8 100%);
+	background: linear-gradient(20deg, var(--primary-color) 30%, #f1aa0fa8 100%);
 }
 
 header section .wrapper {
@@ -172,7 +176,7 @@ header section .wrapper .left .title h1 {
 	font-family: Source Sans Pro;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 88px;
+	font-size: 70px;
 	line-height: 100%;
 	color: var(--white-color);
 	text-shadow: 0px 14px 15px rgba(255, 174, 0, 0.01), 0px 27px 82px rgba(255, 174, 0, 0.28);
@@ -188,39 +192,68 @@ header section .wrapper .left .title p {
 	margin-top: 15px;
 }
 
+/* HERO'S ORDER CARD */
+
 header section .wrapper .left .order-card {
 	background-color: var(--white-color);
-	width: 100%;
+	filter: drop-shadow(0px 5px 10px rgba(255, 174, 0, 0.26)) drop-shadow(0px 20px 40px rgba(255, 174, 0, 0.29));
+	border-radius: 16px;
+
 	margin-top: 32px;
-	padding: 24px;
-	border-radius: 8px;
+	width: 125%;
 }
 
-header section .wrapper .left .order-card a {
-	text-decoration: none;
-}
 header section .wrapper .left .order-card .top {
-	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+
+	border-bottom: 1px solid #eeeeee;
+}
+header section .wrapper .left .order-card .top .left {
+	display: flex;
+	align-items: center;
+	margin: 24px;
+	padding: 10px 24px;
+
+	background: rgba(241, 114, 40, 0.1);
+	border-radius: 8px;
+
+	cursor: pointer;
 }
 
-header section .wrapper .left .order-card .top .top-btn {
-	padding: 10px 24px;
+header section .wrapper .left .order-card .top .left img {
+	width: 23px;
+	height: 28px;
+}
+header section .wrapper .left .order-card .top .left a {
 	font-family: Source Sans Pro;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 100%;
-	color: var(--warning-color);
+	color: #f17228;
+	margin-left: 10px;
+}
+header section .wrapper .left .order-card .top .right {
+	display: flex;
+	align-items: center;
+
 	cursor: pointer;
 }
-header section .wrapper .left .order-card .top .delivery {
-	background: rgba(241, 114, 40, 0.1);
-	border-radius: 8px;
-	margin-right: 8px;
+
+header section .wrapper .left .order-card .top .right img {
+	width: 16px;
+	height: 18px;
 }
 
-header section .wrapper .left .order-card .top .pickup {
+header section .wrapper .left .order-card .top .right a {
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 100%;
 	color: #757575;
+	margin-left: 10px;
 }
 
 header section .wrapper .left .order-card .bottom {
@@ -228,42 +261,53 @@ header section .wrapper .left .order-card .bottom {
 	justify-content: space-between;
 	align-items: center;
 
-	padding-top: 15px;
-
-	border-top: 1px solid var(--gray-100--color);
+	padding: 24px;
 }
 
-header section .wrapper .left .order-card .bottom input {
+header section .wrapper .left .order-card .bottom .input-field {
+	position: relative;
+
 	flex: 1;
-	padding: 12px 10px;
+}
+
+header section .wrapper .left .order-card .bottom .input-field img {
+	position: absolute;
+	left: 15px;
+	width: 18px;
+	height: 34px;
+}
+
+header section .wrapper .left .order-card .bottom .input-field input {
+	width: 100%;
 
 	background: #f5f5f5;
 	border-radius: 8px;
-
 	border: none;
 	outline: none;
+
+	padding: 11.5px 0px 11.5px 46px;
 }
 
-header section .wrapper .left .order-card .bottom input::placeholder {
+header section .wrapper .left .order-card .bottom .input-field input::placeholder {
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 18px;
 	line-height: 140%;
 	color: #9e9e9e;
 }
 
 header section .wrapper .left .order-card .bottom .btn {
+	display: flex;
+	align-items: center;
+
+	padding: 21px 48px;
+
 	background: linear-gradient(95.71deg, #ff7a7a -39.64%, #f75900 135.31%);
 	border-radius: 8px;
-	padding: 21px 48px;
+
 	margin-left: 16px;
-
-	display: flex;
-
-	cursor: pointer;
 }
-
 header section .wrapper .left .order-card .bottom .btn img {
 	width: 14px;
 	height: 14px;
@@ -275,8 +319,6 @@ header section .wrapper .left .order-card .bottom .btn a {
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 100%;
-
 	text-align: center;
-
 	color: #ffffff;
 }
